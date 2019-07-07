@@ -24,9 +24,18 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         myWebView = (WebView)findViewById(R.id.webView);
+
+       // myWebView.setInitialScale(1);
+
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("35.239.40.101");
+
+//        myWebView.getSettings().setLoadWithOverviewMode(true);
+//        myWebView.getSettings().setUseWideViewPort(true);
+//        myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+//        myWebView.setScrollbarFadingEnabled(false);
+
+        myWebView.loadUrl("http://35.239.40.101");
         myWebView.setWebViewClient(new WebViewClient());
 
     }
